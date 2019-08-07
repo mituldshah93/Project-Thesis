@@ -360,7 +360,7 @@ class GCN(Model):
 #                                        logging=self.logging))
 
 
-# Below Operations are for the addition of the summation of the 2 layers, for this model this enhancement provides bad results 
+# Below Operations are for the addition of the summation of the 2 layers, for this model provided enhancement is not efficient 
 # so this enhancement is not recommended
 
                             
@@ -615,5 +615,4 @@ y_train.shape[1]
 # Creating Visualization of Loss
 
 loss_per_epoch = pd.DataFrame({"Epochs" : epoch_train, "Loss" : loss_train})
-# print(loss_per_epoch)
 print(loss_per_epoch.plot(x='Epochs', y='Loss'))
