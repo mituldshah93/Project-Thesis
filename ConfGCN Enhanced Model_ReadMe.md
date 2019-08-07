@@ -15,3 +15,47 @@ Steps to Follow:
 			b. If Clustering co-efficient matrix needs to be implemented, change "def preprocess_adj(adj)" function where "adj_normalized = normalize_adj(adj + diag)"
 
 			c. Change the dataset : in "parser.add_argument('-data',  default='cora',help='Dataset to use')"  we can set any values of   # 'cora', 'citeseer', 'pubmed' and 'cora_ml'
+
+Best Combinations of models with all the datasets are:
+
+•	Pubmed: 
+
+	o	Hidden Layers : 1
+	o	Number of Nodes in Hidden Layer : 16
+	o	Loss : Cross Entropy Softmax V2
+	o	Activation : Relu6 / Selu
+	o	Optimizer : ADAM
+	o	Matrix : Adjacency + Identity
+	o	Learning Rate & Epochs : 0.001 & 250
+
+•	Cora:
+
+	o	Hidden Layers : 1
+	o	Number of Nodes in Hidden Layer : 32
+	o	Loss : Cross Entropy Softmax V2
+	o	Activation : Relu6 / Selu
+	o	Optimizer : ADAM
+	o	Matrix : Adjacency + Clustering Co-efficient Matrix
+	o	Learning Rate & Epochs : 0.001 & 250
+
+•	Citeseer: 
+
+	o	Hidden Layers : 1
+	o	Number of Nodes in Hidden Layer : 16 or 32 (Both are providing Better results)
+	o	Loss : Cross Entropy Softmax V2
+	o	Activation : Relu6 / Selu
+	o	Optimizer : ADAM
+	o	Matrix : Adjacency + Identity
+	o	Learning Rate & Epochs : 0.001 & 250
+
+
+
+•	CoraML:
+
+	o	Hidden Layers : 1, but with Multiple Inputs
+	o	Number of Nodes in Hidden Layer : 16 with output layer is accepting the input as summation of both Input Layer’s outputs and Canonical form having weights as 0.3 for layer having ‘Relu’ activation and 0.7 for layer having ‘Relu6 / Selu’ activation function
+	o	Loss : Cross Entropy Softmax V2
+	o	Activation : Relu, Relu6 / Selu
+	o	Optimizer : ADAM
+	o	Matrix : Adjacency + Identity
+	o	Learning Rate & Epochs : 0.001 & 250
