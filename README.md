@@ -20,7 +20,8 @@ b. If Clustering co-efficient matrix needs to be implemented, change "def prepro
 c. Change the dataset : in "load_data('cora')", we can set any values of   # 'cora', 'citeseer', 'pubmed' and 'cora_ml'
 
 The Best Combinations for the Datasets are:
-•	Pubmed: 
+
+• Pubmed: 
     o	Hidden Layers : 1
     o	Number of Nodes in Hidden Layer : 32
     o	Loss : Cross Entropy Softmax V2
@@ -48,13 +49,13 @@ The Best Combinations for the Datasets are:
     o	Learning Rate & Epochs : 0.001 & 250
     
 •	CoraML:
-    o	Hidden Layers : 1
-    o	Number of Nodes in Hidden Layer : 32
-    o	Loss : Cross Entropy Softmax V2
-    o	Activation : Relu6 / Selu
-    o	Optimizer : ADAM
-    o	Matrix : 0.75 * (Adjacency + Identity)
-    o	Learning Rate & Epochs : 0.001 & 250
+	o	Hidden Layers : 1
+	o	Number of Nodes in Hidden Layer : 32
+	o	Loss : Cross Entropy Softmax V2
+	o	Activation : Relu6 / Selu
+	o	Optimizer : ADAM
+	o	Matrix : 0.75 * (Adjacency + Identity)
+	o	Learning Rate & Epochs : 0.001 & 250
     
     Or
     
