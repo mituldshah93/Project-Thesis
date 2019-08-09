@@ -490,7 +490,7 @@ class ConfGCN(object):
         feed_dict = self.create_feed_dict(split=split)  # Defines the feed_dict to be fed to NN
         loss, acc = [model.loss, model.accuracy] # Computer loss and accuracy
         out_test = sess.run([self.loss, self.accuracy], feed_dict=feed_dict)
-        print("Testing Accuracy", "{:.2f}".format((out_test[1]+0.01)*100), 
+        print("Testing Accuracy", "{:.2f}".format((out_test[1])*100), 
               "% and Execution time : ", "{:.5f}".format(time.time()-time_test))
         return loss, acc # return loss, accuracy
 
